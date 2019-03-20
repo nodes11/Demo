@@ -8,11 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *baseView;
-
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UITextField *textInput;
 
 @end
 
@@ -23,9 +23,27 @@
     
     [_baseView setBackgroundColor:[UIColor whiteColor]];
     
-    [_textLabel setText:@"Your text here!"];
+    [_textLabel setText:@"Your text here..."];
     
     [_textLabel setTextColor:[UIColor blackColor]];
+    
+    [_textInput setDelegate:self];
+}
+
+#pragma mark - UITextFieldDelegate Implementation
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [_textLabel setText:textField.text];
+
+    [_textInput setText:nil];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 @end
