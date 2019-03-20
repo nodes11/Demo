@@ -42,23 +42,59 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="jjv-Ou-okC" userLabel="Red Slider">
+                                <rect key="frame" x="14" y="469" width="347" height="31"/>
+                                <connections>
+                                    <action selector="redSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ORD-VB-KyY"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="qE2-IC-M2S" userLabel="Green Slider">
+                                <rect key="frame" x="14" y="507" width="347" height="31"/>
+                                <connections>
+                                    <action selector="greenSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ijG-8C-h0n"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-Zm-G0x" userLabel="Blue Slider">
+                                <rect key="frame" x="14" y="545" width="347" height="31"/>
+                                <connections>
+                                    <action selector="blueSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="azV-S6-O3n"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iWv-3L-GgO" userLabel="Alpha Slider">
+                                <rect key="frame" x="14" y="583" width="347" height="31"/>
+                                <connections>
+                                    <action selector="alphaSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8MA-rb-2A2"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iWv-3L-GgO" secondAttribute="trailing" constant="16" id="0S2-1C-9of"/>
                             <constraint firstItem="2Kd-zg-GPl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="3j3-lc-c6F">
                                 <variation key="heightClass=regular-widthClass=compact" constant="16"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="32"/>
                             </constraint>
+                            <constraint firstItem="iWv-3L-GgO" firstAttribute="top" secondItem="hr8-Zm-G0x" secondAttribute="bottom" constant="8" id="7HL-KM-K9w"/>
+                            <constraint firstItem="jjv-Ou-okC" firstAttribute="leading" secondItem="iWv-3L-GgO" secondAttribute="leading" id="7cf-qf-2vW"/>
+                            <constraint firstItem="jjv-Ou-okC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BiD-LB-MOB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iWv-3L-GgO" secondAttribute="bottom" constant="54" id="Env-2G-qmX"/>
+                            <constraint firstItem="qE2-IC-M2S" firstAttribute="top" secondItem="jjv-Ou-okC" secondAttribute="bottom" constant="8" id="HBl-Mf-3z9"/>
+                            <constraint firstItem="jjv-Ou-okC" firstAttribute="leading" secondItem="qE2-IC-M2S" secondAttribute="leading" id="Pbf-FT-nZR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MOR-Ct-3cq" secondAttribute="trailing" constant="16" id="ZlJ-ac-gQs"/>
+                            <constraint firstItem="jjv-Ou-okC" firstAttribute="leading" secondItem="hr8-Zm-G0x" secondAttribute="leading" id="bLD-CV-5pW"/>
                             <constraint firstItem="MOR-Ct-3cq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cJk-1d-LIf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qE2-IC-M2S" secondAttribute="trailing" constant="16" id="eCH-Kr-Qvd"/>
                             <constraint firstItem="MOR-Ct-3cq" firstAttribute="top" secondItem="2Kd-zg-GPl" secondAttribute="bottom" constant="48" id="euN-EC-m17">
                                 <variation key="heightClass=regular-widthClass=compact" constant="32"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                             </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hr8-Zm-G0x" secondAttribute="trailing" constant="16" id="gJx-vu-1vu"/>
                             <constraint firstItem="2Kd-zg-GPl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="idv-kI-oL1">
                                 <variation key="heightClass=regular-widthClass=compact" constant="48"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="64"/>
                             </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jjv-Ou-okC" secondAttribute="trailing" constant="16" id="l0d-1O-tao"/>
+                            <constraint firstItem="hr8-Zm-G0x" firstAttribute="top" secondItem="qE2-IC-M2S" secondAttribute="bottom" constant="8" id="mlX-uX-t4J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Kd-zg-GPl" secondAttribute="trailing" constant="32" id="nCC-To-D8X">
                                 <variation key="heightClass=regular-widthClass=compact" constant="16"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="32"/>
@@ -67,13 +103,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="alphaSlider" destination="iWv-3L-GgO" id="ahx-q4-bwt"/>
                         <outlet property="baseView" destination="8bC-Xf-vdC" id="H0m-PZ-4HW"/>
+                        <outlet property="blueSlider" destination="hr8-Zm-G0x" id="4wI-wU-Db5"/>
+                        <outlet property="greenSlider" destination="qE2-IC-M2S" id="lYb-cT-FN0"/>
+                        <outlet property="redSlider" destination="jjv-Ou-okC" id="4uK-yP-iMa"/>
                         <outlet property="textInput" destination="MOR-Ct-3cq" id="g5O-Ov-1uU"/>
                         <outlet property="textLabel" destination="2Kd-zg-GPl" id="e75-In-cdd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>
