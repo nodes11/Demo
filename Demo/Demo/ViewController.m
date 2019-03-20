@@ -10,14 +10,22 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UIView *baseView;
+
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [_baseView setBackgroundColor:[UIColor whiteColor]];
+    
+    [_textLabel setText:@"Your text here!"];
+    
+    [_textLabel setTextColor:[UIColor blackColor]];
 }
-
 
 @end
