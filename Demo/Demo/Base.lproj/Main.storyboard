@@ -30,12 +30,30 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 </variation>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOR-Ct-3cq" userLabel="Text Input">
+                                <rect key="frame" x="16" y="121" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="zBS-eP-Vqh">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="32"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                                    </constraint>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2Kd-zg-GPl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="3j3-lc-c6F">
                                 <variation key="heightClass=regular-widthClass=compact" constant="16"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MOR-Ct-3cq" secondAttribute="trailing" constant="16" id="ZlJ-ac-gQs"/>
+                            <constraint firstItem="MOR-Ct-3cq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cJk-1d-LIf"/>
+                            <constraint firstItem="MOR-Ct-3cq" firstAttribute="top" secondItem="2Kd-zg-GPl" secondAttribute="bottom" constant="48" id="euN-EC-m17">
+                                <variation key="heightClass=regular-widthClass=compact" constant="32"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                             </constraint>
                             <constraint firstItem="2Kd-zg-GPl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="idv-kI-oL1">
                                 <variation key="heightClass=regular-widthClass=compact" constant="48"/>
@@ -50,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="baseView" destination="8bC-Xf-vdC" id="H0m-PZ-4HW"/>
+                        <outlet property="textInput" destination="MOR-Ct-3cq" id="g5O-Ov-1uU"/>
                         <outlet property="textLabel" destination="2Kd-zg-GPl" id="e75-In-cdd"/>
                     </connections>
                 </viewController>
